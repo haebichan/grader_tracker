@@ -7,7 +7,7 @@ client = MongoClient('mongodb://localhost:27017')
 grades = client.tracker.grades 
 #tracker as name of the database, grades as the name of the collection
 
-
+#dictionary to json
 # d = {}
 # for _ in range(3):
 #     name = input('student name: ')
@@ -17,6 +17,9 @@ grades = client.tracker.grades
 #     d = {'name': name, 'klass': klass, 'grade': grade}
 #     grades.insert_one(d)
 
+#------------------#------------------#------------------
+
+#json to dictionary
 total = 0
 count = grades.find().count()
 for g in grades.find():
@@ -24,6 +27,3 @@ for g in grades.find():
     avg = total/count
 print(avg)
 
-
-
-print(len(total))    
